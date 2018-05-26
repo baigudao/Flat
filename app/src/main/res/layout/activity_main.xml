@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/black_000"
+    tools:context="com.taisau.flat.ui.main.MainActivity">
+    <!--  android:layout_width="1820dp"
+     android:layout_width="1422dp"
+    -->
+    <FrameLayout
+        android:id="@+id/main_preview_back_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <SurfaceView
+            android:id="@+id/main_camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_server_connect"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:padding="@dimen/dp10"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_server_connect" />
+
+    <ImageView
+        android:id="@+id/iv_usb_connect"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/dp80"
+        android:layout_marginTop="@dimen/dp10"
+        android:padding="@dimen/dp10"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_usb_connect"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <include
+        layout="@layout/content_main_right_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/content_main_bottom_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+    <!-- </RelativeLayout>-->
+</FrameLayout>
